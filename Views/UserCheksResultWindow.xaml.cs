@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp1.UserData;
 
 namespace WpfApp1.Views
 {
@@ -21,11 +22,12 @@ namespace WpfApp1.Views
     public partial class UserCheksResultWindow : Window
     {
         public ObservableCollection<TestAttempt> Attempts { get; set; }
+        AttemptRepository attemptRepository = new AttemptRepository();
+        UserRepository userRepository = new UserRepository();
         public UserCheksResultWindow()
         {
             InitializeComponent();
-            UserRepository userRepository = new UserRepository();
-            var attempts = userRepository.GetAllResults().Where(User => DataBank.Login == User.UserLogin).ToList();
+            var attempts = attemptRepository.GetAllResults().Where(User => DataBank.Login == User.UserLogin).ToList();
             ObservableCollection<TestAttempt> attemptsObservable = new ObservableCollection<TestAttempt>(attempts);
             Attempts = attemptsObservable;
             dgResults.ItemsSource = Attempts;
@@ -35,7 +37,7 @@ namespace WpfApp1.Views
         {
             var attempt = (TestAttempt)dgResults.SelectedItem;
             UserRepository userRepository = new UserRepository();
-            userRepository.DeleteAttempt(attempt.AttemptId);
+            attemptRepository.DeleteAttempt(attempt.AttemptId);
             Attempts.Remove(attempt);
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)

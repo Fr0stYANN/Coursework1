@@ -117,6 +117,7 @@
     <Compile Include="UserControls\TotalUC.xaml.cs">
       <DependentUpon>TotalUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserData\AttemptRepository.cs" />
     <Compile Include="ViewModels\QuestionCheckBoxViewModel.cs" />
     <Compile Include="ViewModels\TeacherPageViewModel.cs" />
     <Compile Include="Views\CheckResultsWindow.xaml.cs">
@@ -130,6 +131,9 @@
     </Compile>
     <Compile Include="Views\MainTestWindow.xaml.cs">
       <DependentUpon>MainTestWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageUsersPage.xaml.cs">
+      <DependentUpon>ManageUsersPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MathWindow.xaml.cs">
       <DependentUpon>MathWindow.xaml</DependentUpon>
@@ -194,6 +198,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\ManageUsersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MathWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

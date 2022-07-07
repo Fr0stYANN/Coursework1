@@ -14,8 +14,6 @@ namespace WpfApp1.Content
         public int CountRight { get => countRight; set { countRight = value; OnPropertyChanged(); } }
         public int CountTotal { get => countTotal; set { countTotal = value; OnPropertyChanged(); } }
         public TotalContent(ExecuteHandler execute, CanExecuteHandler canExecute = null) : base(execute, canExecute) {
-            UserRepository userRepository = new UserRepository();
-            userRepository.SetPoints(CountRight, DataBank.Login);
         }
     }
 }

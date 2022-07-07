@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1.Views"
         mc:Ignorable="d"
-        Title="TeacherWindow" Height="510" Width="815" WindowStartupLocation="CenterScreen" Icon="/WpfApp1;component/Images/Oxygen-Icons.org-Oxygen-Categories-applications-education-university.ico">
+        Title="Керування тестами" Height="510" Width="815" WindowStartupLocation="CenterScreen" Icon="/Images/Oxygen-Icons.org-Oxygen-Categories-applications-education-university.ico">
     <Grid Margin="0,-4,0,4">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="19*"/>

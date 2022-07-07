@@ -14,7 +14,7 @@
             <ColumnDefinition Width="29*"/>
             <ColumnDefinition Width="304*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="registerButton" Content="Зареєструватись" HorizontalAlignment="Right" VerticalAlignment="Top" Width="166" Margin="181,274,120,0" Height="35" Click="registerButton_Click" Grid.Column="3" GotFocus="registerButton_GotFocus" GotMouseCapture="registerButton_GotMouseCapture" MouseEnter="registerButton_MouseEnter" Background="#FFFFB040" BorderThickness="0"/>
+        <Button x:Name="registerButton" Content="Зареєструватись" HorizontalAlignment="Right" VerticalAlignment="Top" Width="166" Margin="181,274,120,0" Height="35" Click="registerButton_Click" Grid.Column="3" Background="#FFFFB040" BorderThickness="0"/>
         <Button Content="Увійти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" Margin="30,274,0,0" Height="35" Click="Button_Click_1" Grid.Column="3" BorderThickness="0" RenderTransformOrigin="0.5,0.5" Background="#FFFFB040"/>
         <TextBox x:Name="loginTextBox" HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" VerticalAlignment="Top" Width="532" Margin="31,121,0,0" Grid.Column="1" BorderThickness="0,0,0,3" Grid.ColumnSpan="3" BorderBrush="#FFFFD140" materialDesign:HintAssist.Hint="Введіть логін" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FFFF9500" SelectionBrush="#FFFFB040"/>
         <PasswordBox x:Name="passwordTextBox" Margin="31,174,39,129" Grid.Column="1" BorderThickness="0,0,0,3" Grid.ColumnSpan="3" BorderBrush="#FFFFD140" Password="" materialDesign:HintAssist.Hint="Введіть пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" CaretBrush="#FFFF9500" SelectionBrush="#FFFFB040"/>

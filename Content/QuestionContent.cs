@@ -44,7 +44,7 @@ namespace WpfApp1.Content
         {
             if(Minutes >= MinutesLimit)
             {
-                Seconds++;
+                Seconds = 0;
                 timer.Stop();
                 IsEnabled = false;
                 return;

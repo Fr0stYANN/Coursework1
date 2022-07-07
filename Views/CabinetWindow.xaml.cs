@@ -36,6 +36,10 @@ namespace WpfApp1.Views
             {
                 TeacherButton.Visibility = Visibility.Visible;
             }
+            if(DataBank.IsSuperAdmin == true)
+            {
+                ManageUsers.Visibility = Visibility.Visible;
+            }
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -106,6 +110,13 @@ namespace WpfApp1.Views
                 UserCheksResultWindow userCheksResultWindow = new UserCheksResultWindow();
                 userCheksResultWindow.Show();
             }
+        }
+
+        private void ManageUsers_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            ManageUsersPage manageUsersPage = new ManageUsersPage();
+            manageUsersPage.Show();
         }
     }
 }

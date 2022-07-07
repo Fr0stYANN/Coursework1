@@ -65,8 +65,8 @@ namespace WpfApp1.Views
                 DataBank.Password = password;
                 var user = UserRepository.GetUser(login);
                 DataBank.IsTeacher = user.IsTeacher;
-                DataBank.Points = user.Points;
                 DataBank.UserId = user.Id;
+                DataBank.IsSuperAdmin = user.IsSuperAdmin;
                 CabinetWindow window1 = new CabinetWindow();
                 window1.Show();
             }
@@ -77,21 +77,6 @@ namespace WpfApp1.Views
             DataBank.Login = login;
             DataBank.Password = password;
         }
-
-        private void registerButton_GotFocus(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void registerButton_GotMouseCapture(object sender, MouseEventArgs e)
-        {
-        }
-
-        private void registerButton_MouseEnter(object sender, MouseEventArgs e)
-        {
-            
-        }
-
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);

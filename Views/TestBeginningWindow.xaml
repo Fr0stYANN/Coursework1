@@ -8,7 +8,7 @@
         xmlns:content="clr-namespace:WpfApp1.Content"
         xmlns:usercontrols="clr-namespace:WpfApp1.UserControls"
         mc:Ignorable="d" 
-    Title="TestBeginningWindow" Height="510" Width="830" Icon="/WpfApp1;component/Images/Oxygen-Icons.org-Oxygen-Categories-applications-education-university.ico" ResizeMode="CanResize" WindowStartupLocation="CenterScreen">
+    Title="Проходження тесту" Height="510" Width="830" Icon="/Images/Oxygen-Icons.org-Oxygen-Categories-applications-education-university.ico" ResizeMode="CanResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <ContentPresenter Content="{Binding Content}">
             <ContentPresenter.Resources>

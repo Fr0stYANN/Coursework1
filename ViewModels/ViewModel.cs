@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using WpfApp1.Content;
 using WpfApp1.INPC;
 using WpfApp1.TestClasses;
+using WpfApp1.UserData;
 
 namespace WpfApp1.ViewModels
 {
@@ -35,8 +36,8 @@ namespace WpfApp1.ViewModels
                 CountRight = CountRight,
                 CountTotal = TestView.Questions.Length
             };
-            UserRepository userRepository = new UserRepository();
-            userRepository.SetPointsToAttemptTable(DataBank.Login, test.TestName, CountRight);
+            AttemptRepository attemptRepository = new AttemptRepository();
+            attemptRepository.SetPointsToAttemptTable(DataBank.Login, test.TestName, CountRight);
         }
         private void TotalMethod(object parameter)
         {
