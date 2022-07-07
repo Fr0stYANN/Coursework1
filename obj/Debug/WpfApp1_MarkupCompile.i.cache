@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\App.xaml
-8-1337502748
+12-777791919
 
-34-456024397
+412045544660
 16-501560272
-UserControls\QuestionsUC.xaml;UserControls\TitleUC.xaml;UserControls\TotalUC.xaml;Views\MainTestWindow.xaml;Views\MainWindow.xaml;Views\MathWindow.xaml;Views\CabinetWindow.xaml;Views\TestBeginningWindow.xaml;
+UserControls\QuestionsUC.xaml;UserControls\TitleUC.xaml;UserControls\TotalUC.xaml;Views\CheckResultsWindow.xaml;Views\CreateTestWindow.xaml;Views\CreateWindow.xaml;Views\MainTestWindow.xaml;Views\MainWindow.xaml;Views\MathWindow.xaml;Views\CabinetWindow.xaml;Views\TestBeginningWindow.xaml;Views\UserCheksResultWindow.xaml;
 
 True
 

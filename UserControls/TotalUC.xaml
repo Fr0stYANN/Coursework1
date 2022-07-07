@@ -21,8 +21,8 @@
                 <Run Text="{Binding CountTotal}"/><Run Text="."/>
                 </TextBlock>
             </Viewbox>
-            <Button Grid.Row="1" Content="Повторить тест" Background="#FFA64E00" Command="{Binding JumpCommand}"/>
-            <StackPanel HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="801" Background="#FFFF9500" Margin="0,0,-1,0"/>
+            <Button Grid.Row="1" Content="Повторити тест" Background="#FFA64E00" Command="{Binding JumpCommand}"/>
+            <StackPanel HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="869" Background="#FFFF9500" Margin="0,0,-69,0"/>
             <Label Content="TestApplication&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,10,0,0" Width="318" Foreground="#FFF0FBFA" FontFamily="Oswald" FontSize="36" BorderThickness="1,0,0,0" Height="108"/>
             <Image HorizontalAlignment="Left" Height="77" VerticalAlignment="Top" Width="131" Margin="25,10,0,0" Source="/WpfApp1;component/Images/student-icon.png"/>
             <Button x:Name="BackButton" Content="Повернутись назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Margin="598,10,0,0" Height="32" Background="#FFA64E00" Click="BackButton_Click"/>

@@ -11,6 +11,8 @@ namespace WpfApp1.TestClasses
     public partial class TestQuestion 
     {
         public string QuestionText { get; set; }
+        [XmlAttribute()]
+        public bool IsOnlyOne { get; set; }
         [XmlArrayItem("Answer", IsNullable = false)]
         public List<TestAnswer> Answers { get; set; }
     }

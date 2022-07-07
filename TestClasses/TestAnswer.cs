@@ -12,7 +12,6 @@ namespace WpfApp1.TestClasses
     {
         [XmlAttribute()]
         public bool IsRight { get; set; }
-        /// <summary>Текст ответа</summary>
         [XmlText()]
         public string AnswerText { get; set; }
     }

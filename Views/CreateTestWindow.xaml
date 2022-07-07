@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfApp1.Views.CreateTestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Views"
+        mc:Ignorable="d"
+        Title="TeacherWindow" Height="510" Width="815" WindowStartupLocation="CenterScreen" Icon="/WpfApp1;component/Images/Oxygen-Icons.org-Oxygen-Categories-applications-education-university.ico">
+    <Grid Margin="0,-4,0,4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="53*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="TestApplication&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="109,10,0,0" Grid.ColumnSpan="2" Width="315" Foreground="#FFF0FBFA" FontFamily="Oswald" FontSize="36" BorderThickness="1,0,0,0" Height="83"/>
+        <Image HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="130" Margin="23,10,0,0" Source="C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\Images\student-icon.png" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="73" VerticalAlignment="Top" Width="114" Margin="29.334,195,0,0" Background="#FFE63232" Grid.Column="4" Visibility="Hidden"/>
+        <Button x:Name="BackButton" Content="Повернутись назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Grid.Column="1" Margin="380,10,0,0" Height="32" Background="#FFA64E00" Click="BackButton_Click"/>
+        <StackPanel Grid.ColumnSpan="2" Panel.ZIndex="-10" HorizontalAlignment="Left" Height="93" VerticalAlignment="Top" Width="817" Background="#FFFF9500" Margin="-2,0,0,0" IsEnabled="False"/>
+        <Button x:Name="ExitButton" Content="Вийти" HorizontalAlignment="Left" Click="ExitButton_Click" VerticalAlignment="Top" Width="173" Grid.Column="1" Margin="380,47,0,0" Height="37" Background="#FFA64E00" />
+        <ListBox Name="testss" Margin="66,150,30,131" Grid.ColumnSpan="2" BorderBrush="Black">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel Orientation="Horizontal">
+                        <StackPanel Width="auto" Orientation="Horizontal">
+                            <TextBlock Text="{Binding TestName}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Width="auto"/>
+                            <Button Content="{Binding IsActive}" Margin="40,0,0,0" x:Name="isActiveBool" Background="DeepSkyBlue" Width="200"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="UploadContent"
+                                Click="UploadContent_Click"
+                                Content="Створити новий тест"
+                                Background="Orange" Grid.ColumnSpan="2" Margin="23,360,560,27"
+                                />
+        <Button Content="Змінити стан тесту"  Width="250" Click="Button_Click" Background="Orange" Margin="57,336,276,51" Grid.Column="1"/>
+        <Button x:Name="DeleteTest" Content="Видалити" Background="Red" Click="DeleteTest_Click" Grid.Column="1" Margin="344,336,30,51"/>
+    </Grid>
+</Window>

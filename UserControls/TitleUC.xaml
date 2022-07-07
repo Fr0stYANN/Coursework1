@@ -11,7 +11,7 @@
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <StackPanel HorizontalAlignment="Left" Height="123" VerticalAlignment="Top" Width="800" Background="#FFFF9500">
+        <StackPanel HorizontalAlignment="Left" Height="123" VerticalAlignment="Top" Width="822" Background="#FFFF9500" Margin="0,0,-22,0">
             <Image HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="90" Margin ="20,10,0,0" Source="/WpfApp1;component/Images/student-icon.png"  RenderTransformOrigin="0.572,1.045"/>
             <Label Content="TestApplication&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="140,-80,0,0" Width="242" Foreground="#FFF0FBFA" FontFamily="Oswald" FontSize="36" BorderThickness="1,0,0,0" Height="85"/>
         </StackPanel>

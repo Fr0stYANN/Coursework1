@@ -21,5 +21,15 @@ namespace WpfApp1
             }
             return data.Tests;
         }
+        public List<Test> SetSomeChanges(List<Test> Tests)
+        {
+            DataContainer data = new DataContainer();
+            data.Tests = Tests;
+            using(FileStream fs = new FileStream(@"C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\Test.xml", FileMode.Truncate))
+            {
+                xmlSerializer.Serialize(fs, data);
+            }
+            return data.Tests;
+        }
     }
 }

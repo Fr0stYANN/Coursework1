@@ -25,6 +25,15 @@ namespace WpfApp1
             }
             return true;
         }
+        public User GetUser(string login)
+        {
+            var sqlQuery = "Select * from Users where Login = @Login";
+            using(IDbConnection db = new SqlConnection(ConnectionString))
+            {
+                var res = db.QueryFirstOrDefault<User>(sqlQuery, new { Login = login });
+                return res;
+            }
+        }
         public int RegisterUser(string password, string login)
         {
             var sqlQuery = "Insert into Users (Login, Password) Values (@Login,@Password)";
@@ -42,6 +51,31 @@ namespace WpfApp1
                 db.Execute(sqlQuery, new { Points = points, Login = login });
             }
             return 1;
+        }
+        public void SetPointsToAttemptTable(string userLogin, string testName, int points)
+        {
+            var sqlQuery = @"INSERT INTO Attempts (TestName, UserLogin, Points, AttemptDate) VALUES(@TestName, @UserLogin, @Points, @AttemptDate)";
+            using(IDbConnection db = new SqlConnection(ConnectionString))
+            {
+                db.Execute(sqlQuery, new { UserLogin = userLogin, TestName = testName, Points = points, AttemptDate = DateTime.Now });
+            }
+        }
+        public List<TestAttempt> GetAllResults()
+        {
+            var sqlQuery = @"SELECT * FROM Attempts";
+            using(IDbConnection db = new SqlConnection(ConnectionString))
+            {
+                var testAttempts = db.Query<TestAttempt>(sqlQuery);
+                return testAttempts.ToList();
+            }
+        }
+        public void DeleteAttempt(int attemptId)
+        {
+            var sqlQuery = "DELETE FROM Attempts WHERE AttemptId = @AttemptId";
+            using(IDbConnection db = new SqlConnection(ConnectionString))
+            {
+                db.Execute(sqlQuery, new { AttemptId = attemptId });
+            }
         }
     }
 }

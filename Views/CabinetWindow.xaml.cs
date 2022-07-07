@@ -15,6 +15,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Threading;
 using WpfApp1.Views;
+using WpfApp1.TestClasses;
 
 namespace WpfApp1.Views
 {
@@ -23,37 +24,56 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class CabinetWindow : Window
     {
-        //DataBase dataBase = new DataBase();
-        SqlDataAdapter adapter = new SqlDataAdapter();
-        DataTable dataTable = new DataTable();
+        public List<Test> Tests { get; set; }
         public CabinetWindow()
         {
-            InitializeComponent();
+             InitializeComponent();
+            XmlDataProvider xmlDataProvider = new XmlDataProvider();
+            var tests = xmlDataProvider.GetAllTests();
+            Tests = tests.Where(t => t.IsActive == true).ToList();
+            availableTests.ItemsSource = Tests;
+            if (DataBank.IsTeacher == true)
+            {
+                TeacherButton.Visibility = Visibility.Visible;
+            }
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //dataGrid.Visibility = Visibility.Hidden;
         }
+        private void StartTest(object sender, RoutedEventArgs e)
+        {
+            var testId = (availableTests.SelectedItem as Test).TestId;
+            this.Hide();
+            TestBeginningWindow testBeginningWindow = new TestBeginningWindow(testId);
+            testBeginningWindow.Show();
 
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //this.Hide();
-            //MathWindow mathWindow = new MathWindow();
-            //mathWindow.Show();
-
-            this.Hide();
-            TestBeginningWindow testBeginningWindow = new TestBeginningWindow();
-            testBeginningWindow.Show();
-            //string point;
-            //var login = DataBank.Login;
-            //var password = DataBank.Password;
-            //string queryString = $"select Points from Users where Login = '{login}' and Password = '{password}'";
-            //SqlCommand sqlCommand = new SqlCommand(queryString, dataBase.GetConnection());
-            //adapter.SelectCommand = sqlCommand;
-            //adapter.Fill(dataTable);
-            //dataGrid.ItemsSource = dataTable.DefaultView;
+            if (Tests[0].IsActive == true)
+            {
+                this.Hide();
+                TestBeginningWindow testBeginningWindow = new TestBeginningWindow(0);
+                testBeginningWindow.Show();
+            }
+            else
+            {
+                MessageBox.Show("Даний тест не є активним!", "Помилка!", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
-
+        private void Button_Click1(object sender, RoutedEventArgs e)
+        {
+            if (Tests[1].IsActive == true)
+            {
+                this.Hide();
+                TestBeginningWindow testBeginningWindow = new TestBeginningWindow(1);
+                testBeginningWindow.Show();
+            }
+            else
+            {
+                MessageBox.Show("Даний тест не є активним!", "Помилка!", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -64,6 +84,28 @@ namespace WpfApp1.Views
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void a_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            CreateTestWindow createTestWindow = new CreateTestWindow();
+            createTestWindow.Show();
+        }
+
+        private void CheckResults_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            if (DataBank.IsTeacher)
+            {
+                CheckResultsWindow checkResultsWindow = new CheckResultsWindow();
+                checkResultsWindow.Show();
+            }
+            else
+            {
+                UserCheksResultWindow userCheksResultWindow = new UserCheksResultWindow();
+                userCheksResultWindow.Show();
+            }
         }
     }
 }

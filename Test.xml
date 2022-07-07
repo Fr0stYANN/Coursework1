@@ -1,63 +1,101 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<DataContainer  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
- <Tests>
-	<Test>
-		<TestName>Test 1</TestName>
-		<Questions>
-			<Question>
-				<QuestionText>2*2</QuestionText>
-				<Answers>
-					<Answer IsRight="false">2</Answer>
-					<Answer IsRight="false">3</Answer>
-					<Answer IsRight="true">4</Answer>
-				</Answers>
-			</Question>
-			<Question>
-				<QuestionText>2*2</QuestionText>
-				<Answers>
-					<Answer IsRight="false">2</Answer>
-					<Answer IsRight="false">3</Answer>
-					<Answer IsRight="true">4</Answer>
-				</Answers>
-			</Question>
-			<Question>
-				<QuestionText>2*2</QuestionText>
-				<Answers>
-					<Answer IsRight="false">2</Answer>
-					<Answer IsRight="false">3</Answer>
-					<Answer IsRight="true">4</Answer>
-				</Answers>
-			</Question>
-		</Questions>
-	</Test>
- 	<Test>
-		<TestName>Test 2</TestName>
-		<Questions>
-			<Question>
-				<QuestionText>2*2</QuestionText>
-				<Answers>
-					<Answer IsRight="false">2</Answer>
-					<Answer IsRight="false">3</Answer>
-					<Answer IsRight="true">4</Answer>
-				</Answers>
-			</Question>
-			<Question>
-				<QuestionText>2*2</QuestionText>
-				<Answers>
-					<Answer IsRight="false">2</Answer>
-					<Answer IsRight="false">3</Answer>
-					<Answer IsRight="true">4</Answer>
-				</Answers>
-			</Question>
-			<Question>
-				<QuestionText>2*2</QuestionText>
-				<Answers>
-					<Answer IsRight="false">2</Answer>
-					<Answer IsRight="false">3</Answer>
-					<Answer IsRight="true">4</Answer>
-				</Answers>
-			</Question>
-		</Questions>
-	</Test>
- </Tests>
+<?xml version="1.0"?>
+<DataContainer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Tests>
+    <Test>
+      <TestName>Математика</TestName>
+      <IsActive>true</IsActive>
+      <TestId>1</TestId>
+      <MinutesLimit>1</MinutesLimit>
+      <Questions>
+        <Question IsOnlyOne="false">
+          <QuestionText>2*5</QuestionText>
+          <Answers>
+            <Answer IsRight="false">7</Answer>
+            <Answer IsRight="true">9</Answer>
+            <Answer IsRight="true">10</Answer>
+          </Answers>
+        </Question>
+        <Question IsOnlyOne="true">
+          <QuestionText>20*20</QuestionText>
+          <Answers>
+            <Answer IsRight="false">37</Answer>
+            <Answer IsRight="false">35</Answer>
+            <Answer IsRight="true">40</Answer>
+          </Answers>
+        </Question>
+        <Question IsOnlyOne="true">
+          <QuestionText>2*2</QuestionText>
+          <Answers>
+            <Answer IsRight="true">4</Answer>
+            <Answer IsRight="false">8</Answer>
+            <Answer IsRight="false">10</Answer>
+          </Answers>
+        </Question>
+      </Questions>
+    </Test>
+    <Test>
+      <TestName>Основи Програмування</TestName>
+      <IsActive>true</IsActive>
+      <TestId>2</TestId>
+      <MinutesLimit>1</MinutesLimit>
+      <Questions>
+        <Question IsOnlyOne="true">
+          <QuestionText>2*2</QuestionText>
+          <Answers>
+            <Answer IsRight="false">2</Answer>
+            <Answer IsRight="false">3</Answer>
+            <Answer IsRight="true">4</Answer>
+          </Answers>
+        </Question>
+        <Question IsOnlyOne="true">
+          <QuestionText>2*2</QuestionText>
+          <Answers>
+            <Answer IsRight="false">2</Answer>
+            <Answer IsRight="false">3</Answer>
+            <Answer IsRight="true">4</Answer>
+          </Answers>
+        </Question>
+        <Question IsOnlyOne="true">
+          <QuestionText>2*2</QuestionText>
+          <Answers>
+            <Answer IsRight="false">2</Answer>
+            <Answer IsRight="false">3</Answer>
+            <Answer IsRight="true">4</Answer>
+          </Answers>
+        </Question>
+      </Questions>
+    </Test>
+    <Test>
+      <TestName>Фізика</TestName>
+      <IsActive>true</IsActive>
+      <TestId>1</TestId>
+      <MinutesLimit>0</MinutesLimit>
+      <Questions>
+        <Question IsOnlyOne="false">
+          <QuestionText>2*5</QuestionText>
+          <Answers>
+            <Answer IsRight="false">7</Answer>
+            <Answer IsRight="true">9</Answer>
+            <Answer IsRight="true">10</Answer>
+          </Answers>
+        </Question>
+        <Question IsOnlyOne="true">
+          <QuestionText>20*20</QuestionText>
+          <Answers>
+            <Answer IsRight="false">37</Answer>
+            <Answer IsRight="false">35</Answer>
+            <Answer IsRight="true">40</Answer>
+          </Answers>
+        </Question>
+        <Question IsOnlyOne="true">
+          <QuestionText>2*2</QuestionText>
+          <Answers>
+            <Answer IsRight="true">4</Answer>
+            <Answer IsRight="false">8</Answer>
+            <Answer IsRight="false">10</Answer>
+          </Answers>
+        </Question>
+      </Questions>
+    </Test>
+  </Tests>
 </DataContainer>

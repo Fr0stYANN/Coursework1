@@ -15,7 +15,6 @@ using System.Windows.Shapes;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows;
-using WpfApp1.Models;
 
 namespace WpfApp1.Views
 {
@@ -41,6 +40,7 @@ namespace WpfApp1.Views
             if (res == 1)
             {
                 MessageBox.Show("Ви успішно зареєструвались, натисніть кнопку увійти!", "Успішно!", MessageBoxButton.OK, MessageBoxImage.Information);
+                var user = UserRepository.GetUser(login);
                 DataBank.Login = login;
                 DataBank.Password = password;
             }
@@ -63,6 +63,10 @@ namespace WpfApp1.Views
                 MessageBox.Show("Ви успішно увійшли до особистого кабінету!!", "Вітаємо!",MessageBoxButton.OK,MessageBoxImage.Information);
                 DataBank.Login = login;
                 DataBank.Password = password;
+                var user = UserRepository.GetUser(login);
+                DataBank.IsTeacher = user.IsTeacher;
+                DataBank.Points = user.Points;
+                DataBank.UserId = user.Id;
                 CabinetWindow window1 = new CabinetWindow();
                 window1.Show();
             }

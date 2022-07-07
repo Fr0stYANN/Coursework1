@@ -19,9 +19,10 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class TestBeginningWindow : Window
     {
-        public TestBeginningWindow()
+        public TestBeginningWindow(int testId)
         {
             InitializeComponent();
+            DataContext = new ViewModels.ViewModel(testId);
         }
     }
 }

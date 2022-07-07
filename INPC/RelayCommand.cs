@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 namespace WpfApp1.INPC
 {
-    #region Делегаты для методов WPF команд
+    #region Делегати для команд
     public delegate void ExecuteHandler(object parameter);
     public delegate bool CanExecuteHandler(object parameter);
     #endregion
@@ -25,11 +25,7 @@ namespace WpfApp1.INPC
             this.onExecute = execute;
             this.canExecute = canExecute;
         }
-        /// <returns>True - если выполнение команды разрешено</returns>
         public bool CanExecute(object parameter) => canExecute == null ? true : canExecute.Invoke(parameter);
-
-        /// <summary>Вызов выполняющего метода команды</summary>
-        /// <param name="parameter">Параметр команды</param>
         public void Execute(object parameter) => onExecute?.Invoke(parameter);
     }
 }

@@ -41,3 +41,11 @@ C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\UserControls\TotalUC.
 C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\UserControls\QuestionsUC.baml
 C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\UserControls\TitleUC.baml
 C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\UserControls\TotalUC.baml
+C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\Views\CreateTestWindow.g.cs
+C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\Views\CreateTestWindow.baml
+C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\Views\CreateWindow.g.cs
+C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\Views\CreateWindow.baml
+C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\Views\CheckResultsWindow.g.cs
+C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\Views\CheckResultsWindow.baml
+C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\Views\UserCheksResultWindow.g.cs
+C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\Views\UserCheksResultWindow.baml

@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using WpfApp1.Content;
 using WpfApp1.INPC;
-using WpfApp1.Models;
 using WpfApp1.TestClasses;
 
 namespace WpfApp1.ViewModels
@@ -16,39 +15,33 @@ namespace WpfApp1.ViewModels
         public string TestName => test.TestName;
         public TestViewModel TestView { get; private set; }
         private BaseContent _content;
-        /// <summary>Контент ViewModel</summary>
         public BaseContent Content { get => _content; set { _content = value; OnPropertyChanged(); } }
-        public ViewModel()
+        public ViewModel(int testId)
         {
             XmlDataProvider xmlDataProvider = new XmlDataProvider();
-            test = xmlDataProvider.GetAllTests()[1];
-            TotalMetod(null);
+            test = xmlDataProvider.GetAllTests().Where(test => test.TestId == testId).FirstOrDefault();
+            TestIdContainer.TestMinutesLimit = test.MinutesLimit;
+            TotalMethod(null);
         }
-        private void TitleMetod(object parameter)
+        private void TitleMethod(object parameter)
         {
-            Content = new QuestionsContent(QuestionsMetod) { Questions = TestView.Questions };
+            Content = new QuestionsContent(QuestionsMethod, test.MinutesLimit) { Questions = TestView.Questions };
         }
-
-        /// <summary>Метод для контента вопросов теста</summary>
-        /// <param name="parameter">Не используется</param>
-        private void QuestionsMetod(object parameter)
+        private void QuestionsMethod(object parameter)
         {
             int CountRight = TestView.RightCount();
-            Content = new TotalContent(TotalMetod)
+            Content = new TotalContent(TotalMethod)
             {
                 CountRight = CountRight,
                 CountTotal = TestView.Questions.Length
             };
             UserRepository userRepository = new UserRepository();
-            userRepository.SetPoints(CountRight, DataBank.Login);
+            userRepository.SetPointsToAttemptTable(DataBank.Login, test.TestName, CountRight);
         }
-
-        /// <summary>Метод для контента окончания теста</summary>
-        /// <param name="parameter">Не используется</param>
-        private void TotalMetod(object parameter)
+        private void TotalMethod(object parameter)
         {
             TestView = new TestViewModel(test);
-            Content = new TitleContent(TitleMetod) { TestName = TestView.TestName };
+            Content = new TitleContent(TitleMethod) { TestName = TestView.TestName };
         }
     }
 }

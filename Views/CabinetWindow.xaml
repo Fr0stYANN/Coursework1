@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1.Views"
         mc:Ignorable="d"
-        Title="Особистий кабінет" Height="425.5" Width="800" Loaded="Window_Loaded" Icon="C:\Users\Phoenix\Desktop\Coursework\Putin Huilo\WpfApp1\Images\Oxygen-Icons.org-Oxygen-Categories-applications-education-university.ico" WindowStartupLocation="CenterScreen">
-    <Grid RenderTransformOrigin="0.506,0.545">
+        Title="Особистий кабінет" Height="545.5" Width="892" Loaded="Window_Loaded" Icon="C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\Images\Oxygen-Icons.org-Oxygen-Categories-applications-education-university.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="31*"/>
             <ColumnDefinition Width="184*"/>
@@ -14,29 +14,23 @@
             <ColumnDefinition Width="265*"/>
             <ColumnDefinition Width="154*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="240" Margin="22,38,0,0" Grid.Column="2" Grid.ColumnSpan="2"/>
-        <StackPanel x:Name="stackPanel" HorizontalAlignment="Left" Height="212" VerticalAlignment="Top" Width="792" Margin="0,96,0,0" Grid.ColumnSpan="5" RenderTransformOrigin="0.5,0.5">
-            <StackPanel.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="0.118"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="0.748"/>
-                </TransformGroup>
-            </StackPanel.RenderTransform>
+        <StackPanel x:Name="stackPanel" Margin="9.421,161,10.579,0" HorizontalAlignment="Center" Height="254" VerticalAlignment="Top" Width="626" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5" Grid.Column="2">
+            <ListBox BorderBrush="Black" Name="availableTests" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,60,0">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock FontSize="20" HorizontalAlignment="Center" Text="{Binding TestName}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button Content="Пройти тест" Margin="50" HorizontalAlignment="Right" Visibility="Visible"  Width="200"  Background ="#FFA64E00" Click="StartTest" Height="38"/>
         </StackPanel>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="  Вітаємо, Ви увійшли до особистого кабінету" VerticalAlignment="Top" Height="50" Width="792" FontFamily="Oswald" FontSize="20" Margin="-2,98,0,0" Foreground="#FFFF9500" Grid.ColumnSpan="5" IsHitTestVisible="False" Visibility="Hidden"/>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="  Оберіть предмет для проходження тестування" VerticalAlignment="Top" Height="50" Width="632" FontFamily="Oswald" FontSize="24" Margin="99,116,30,0" Foreground="#FFFF9500" Grid.ColumnSpan="4" Grid.Column="1"/>
-        <StackPanel Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="93" VerticalAlignment="Top" Width="794" Background="#FFFF9500" Margin="-2,0,0,0" IsEnabled="False"/>
+        <Button x:Name="TeacherButton" Content="Керувати тестами" Margin="10,98,0,0" HorizontalAlignment="Left"  Visibility="Visible" VerticalAlignment="Top" Width="213" Height="49" Background="#FFA64E00" Click="a_Click" RenderTransformOrigin="0.5,0.347" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="  Оберіть предмет для проходження тестування" VerticalAlignment="Top" Height="50" Width="492" FontFamily="Oswald" FontSize="24" Margin="74.421,116,79.579,0" Foreground="#FFFF9500" Grid.ColumnSpan="3" Grid.Column="2"/>
+        <StackPanel Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="93" VerticalAlignment="Top" Width="889" Background="#FFFF9500" Margin="-2,0,-0.421,0" IsEnabled="False"/>
         <Label Content="TestApplication&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="98.5,10,0,0" Grid.ColumnSpan="3" Width="315" Foreground="#FFF0FBFA" FontFamily="Oswald" FontSize="36" BorderThickness="1,0,0,0" Grid.Column="1"/>
-        <Image HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="130" Margin="23,10,0,0" Source="C:\Users\Phoenix\Desktop\Coursework\Putin Huilo\WpfApp1\Images\student-icon.png" Grid.ColumnSpan="2"/>
-        <Button x:Name="mathButton" Content="Математика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Grid.Column="1" Margin="33,195,0,0" Click="Button_Click" RenderTransformOrigin="-0.342,-0.469" Height="48" Background="#FFA64E00"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="73" VerticalAlignment="Top" Width="114" Margin="29.334,195,0,0" Background="#FFE63232" Grid.Column="4" Visibility="Hidden"/>
-        <Button Content="Математика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Grid.Column="2" Margin="47,195,0,0" Click="Button_Click" RenderTransformOrigin="-0.342,-0.469" Height="48" Background="#FFA64E00"/>
-        <Button Content="Математика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Grid.Column="3" Margin="78,195,0,0" Click="Button_Click" RenderTransformOrigin="-0.342,-0.469" Height="48" Background="#FFA64E00"/>
-        <Button Content="Математика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Grid.Column="3" Margin="254,195,0,0" Click="Button_Click" RenderTransformOrigin="-0.342,-0.469" Height="48" Grid.ColumnSpan="2" Background="#FFA64E00"/>
+        <Image HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="130" Margin="23,10,0,0" Source="C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\Images\student-icon.png" Grid.ColumnSpan="2"/>
         <Button x:Name="BackButton" Content="Повернутись назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Grid.Column="3" Margin="215,10,0,0" Height="32" Background="#FFA64E00" Grid.ColumnSpan="2" Click="BackButton_Click"/>
         <Button x:Name="ExitButton" Content="Вийти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Grid.Column="3" Margin="215,47,0,0" Height="37" Background="#FFA64E00" Grid.ColumnSpan="2" Click="ExitButton_Click"/>
-
+        <Button x:Name="CheckResults"  Width="213" Height="Auto"  Click="CheckResults_Click" Content="Перевірити результати"  Margin="10,161,17,295" Background="#FFA64E00" RenderTransformOrigin="1.104,0.705" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

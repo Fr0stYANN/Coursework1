@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using WpfApp1.Content;
 using WpfApp1.Views;
 
 namespace WpfApp1.UserControls
@@ -25,21 +26,43 @@ namespace WpfApp1.UserControls
         public QuestionsUC()
         {
             InitializeComponent();
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(1);
-            timer.Tick += timer_Tick;
-            timer.Start();
+            //DispatcherTimer timer = new DispatcherTimer();
+            //timer.Interval = TimeSpan.FromSeconds(1);
+            //timer.Tick += timer_Tick;
+            //timer.Start();
         }
 
-        void timer_Tick(object sender, EventArgs e)
-        {
-            //Lbl_Timer.Content = DateTime.Now.ToLongTimeString();
-        }
+        //void timer_Tick(object sender, EventArgs e)
+        //{
+        //    if (minutes >= TestIdContainer.TestMinutesLimit)
+        //        StopTest();
+        //    if (seconds >= 59)
+        //    {
+        //        seconds = 0;
+        //        minutes++;
+        //    }
+        //    else
+        //    {
+        //        seconds++;
+        //    }
+        //    if (seconds < 10)
+        //    {
+        //        Lbl_Timer.Content = $"0{minutes}:0{seconds}";
+        //    }
+        //    else
+        //    {
+        //        Lbl_Timer.Content = $"0{minutes}:{seconds}";
+        //    }
+        //}
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             CabinetWindow cabinetWindow = new CabinetWindow();
             cabinetWindow.Show();
+        }
+        private void StopTest()
+        {
+            MessageBox.Show("Час вичерпано", "Помилка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }

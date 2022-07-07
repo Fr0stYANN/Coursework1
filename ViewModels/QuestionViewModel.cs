@@ -23,7 +23,9 @@ namespace WpfApp1.ViewModels
         public bool Value => Answers.All(ans => ans.Value);
         public static QuestionViewModel Create(TestQuestion testQuestion)
         {
-            return new QuestionRadioButtonViewModel(testQuestion);
+            if (testQuestion.IsOnlyOne)
+                return new QuestionRadioButtonViewModel(testQuestion);
+            return new QuestionCheckBoxViewModel(testQuestion);
         }
     }
 }
