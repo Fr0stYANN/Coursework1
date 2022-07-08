@@ -57,6 +57,8 @@ namespace WpfApp1.UserControls
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
+            var window = Window.GetWindow(this);
+            window.Hide();
             CabinetWindow cabinetWindow = new CabinetWindow();
             cabinetWindow.Show();
         }

@@ -21,7 +21,6 @@ namespace WpfApp1.ViewModels
         {
             XmlRepository xmlDataProvider = new XmlRepository();
             test = xmlDataProvider.GetAllTests().Where(test => test.TestId == testId).FirstOrDefault();
-            //TestIdContainer.TestMinutesLimit = test.MinutesLimit;
             TotalMethod(null);
         }
         private void TitleMethod(object parameter)

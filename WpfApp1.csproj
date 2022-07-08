@@ -97,17 +97,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="HashPassword.cs" />
+    <Compile Include="CommonClasses\HashPassword.cs" />
     <Compile Include="Content\BaseContent.cs" />
     <Compile Include="Content\QuestionContent.cs" />
     <Compile Include="Content\TitleContent.cs" />
     <Compile Include="Content\TotalContent.cs" />
-    <Compile Include="DataBank.cs" />
-    <Compile Include="DataContainer.cs" />
+    <Compile Include="CommonClasses\DataBank.cs" />
+    <Compile Include="CommonClasses\DataContainer.cs" />
     <Compile Include="INPC\OnPropertyChangedBaseImplementation.cs" />
     <Compile Include="INPC\RelayCommand.cs" />
     <Compile Include="Models\TestAttempt.cs" />
-    <Compile Include="TestIdContainer.cs" />
     <Compile Include="UserControls\QuestionsUC.xaml.cs">
       <DependentUpon>QuestionsUC.xaml</DependentUpon>
     </Compile>
@@ -119,7 +118,6 @@
     </Compile>
     <Compile Include="Repositories\AttemptRepository.cs" />
     <Compile Include="ViewModels\QuestionCheckBoxViewModel.cs" />
-    <Compile Include="ViewModels\TeacherPageViewModel.cs" />
     <Compile Include="Views\CheckResultsWindow.xaml.cs">
       <DependentUpon>CheckResultsWindow.xaml</DependentUpon>
     </Compile>
@@ -272,9 +270,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\premium-icon-left-arrow-5166419.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="XMLFile1.xml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Test.xml" />

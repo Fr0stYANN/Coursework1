@@ -27,9 +27,10 @@ namespace WpfApp1.Views
         public ManageUsersPage()
         {
             InitializeComponent();
-            var users = userRepository.GetAllUsers();
+            var users = userRepository.GetAllUsers().Where(user => user.Id != DataBank.UserId);
             Users = new ObservableCollection<User>(users);
             dgUsers.ItemsSource = Users;
+            textBox1.Text = "Введіть логін користувача";
         }
 
         private void deleteUser_Click(object sender, RoutedEventArgs e)
@@ -42,24 +43,21 @@ namespace WpfApp1.Views
         private void makeIsTeacher_Click(object sender, RoutedEventArgs e)
         {
             var user = (User)dgUsers.SelectedItem;
-            attemptRepository.MakeUserTeacher(user.Id);
+            attemptRepository.MakeUserTeacher(user.Id, user.IsTeacher);
             var index = Users.IndexOf(Users.Where(userr => userr.Id == user.Id).FirstOrDefault());
-            Users[index].IsTeacher = true;
+            Users[index].IsTeacher = !Users[index].IsTeacher;
+            var newUsers = Users;
+            dgUsers.Items.Refresh();
         }
 
         private void makeIsSuperAdmin_Click(object sender, RoutedEventArgs e)
         {
             var user = (User)dgUsers.SelectedItem;
-            attemptRepository.MakeUserSuperAdmin(user.Id);
+            attemptRepository.MakeUserSuperAdmin(user.Id, user.IsSuperAdmin);
             var index = Users.IndexOf(Users.Where(userr => userr.Id == user.Id).FirstOrDefault());
-            Users[index].IsSuperAdmin = true;
-        }
-
-        private void RefreshButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
-            ManageUsersPage manageUsersPage = new ManageUsersPage();
-            manageUsersPage.Show();
+            Users[index].IsSuperAdmin = !Users[index].IsSuperAdmin;
+            var newUsers = Users;
+            dgUsers.Items.Refresh();
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
@@ -71,6 +69,22 @@ namespace WpfApp1.Views
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
+        }
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (textBox1.Text != "Введіть логін користувача")
+            {
+                var filtered = Users.Where(user => user.Login.Contains(textBox1.Text.ToString())).ToList();
+                dgUsers.ItemsSource = filtered;
+            }
+        }
+        private void textBox1_MouseLeave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text)) textBox1.Text = "Введіть логін користувача";
+        }
+        private void textBox1_MouseEnter_1(object sender, MouseEventArgs e)
+        {
+            textBox1.Text = String.Empty;
         }
     }
 }

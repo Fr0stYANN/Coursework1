@@ -44,9 +44,18 @@ namespace WpfApp1.Content
         {
             if(Minutes >= MinutesLimit)
             {
-                Seconds = 0;
-                timer.Stop();
+                Seconds++;
                 IsEnabled = false;
+                if(minutes > 10)
+                {
+                    TimerString = $"{minutes}:00";
+                }
+                else
+                {
+                    TimerString = $"0{minutes}:00";
+                }
+                timer.Stop();
+                return;
             }
             if (Seconds >= 59)
             {

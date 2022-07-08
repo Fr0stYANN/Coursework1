@@ -37,17 +37,33 @@ namespace WpfApp1.UserData
                 db.Execute(sqlQuery, new { AttemptId = attemptId });
             }
         }
-        public void MakeUserTeacher(int userId)
+        public void MakeUserTeacher(int userId, bool IsTeacher)
         {
-            var sqlQuery = "UPDATE Users SET IsTeacher = 1 WHERE Id = @Id";
+            var sqlQuery = "";
+            if (IsTeacher)
+            {
+                sqlQuery = "UPDATE Users SET IsTeacher = 0 WHERE Id = @Id";
+            }
+            else
+            {
+                sqlQuery = "UPDATE Users SET IsTeacher = 1 WHERE Id = @Id";
+            };
             using (IDbConnection db = new SqlConnection(ConnectionString))
             {
                 db.Execute(sqlQuery, new { Id = userId });
             }
         }
-        public void MakeUserSuperAdmin(int userId)
+        public void MakeUserSuperAdmin(int userId, bool IsSuperAdmin)
         {
-            var sqlQuery = "UPDATE Users SET IsSuperAdmin = 1, IsTeacher = 1 WHERE Id = @Id";
+            var sqlQuery = "";
+            if (IsSuperAdmin)
+            {
+                sqlQuery = "UPDATE Users SET IsSuperAdmin = 0 WHERE Id = @Id";
+            }
+            else
+            {
+                sqlQuery = "UPDATE Users SET IsSuperAdmin = 1 WHERE Id = @Id";
+            }
             using (IDbConnection db = new SqlConnection(ConnectionString))
             {
                 db.Execute(sqlQuery, new { Id = userId });

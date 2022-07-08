@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1.Views"
         mc:Ignorable="d"
-        Title="Результати" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Images/Oxygen-Icons.org-Oxygen-Categories-applications-education-university.ico">
-    <Grid>
-        <DataGrid x:Name="dgResults" CanUserAddRows="False"  AutoGenerateColumns="False" Margin="64,116,47,19">
+        Title="Результати" Height="520" Width="1048" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Images/Oxygen-Icons.org-Oxygen-Categories-applications-education-university.ico">
+    <Grid Height="521" VerticalAlignment="Top">
+        <TextBox x:Name="textBox1" FontSize="15" Height="30" Margin="59,120,316,0" VerticalAlignment="Top" MouseEnter="textBox1_MouseEnter_1" MouseLeave="textBox1_MouseLeave" KeyUp="textBox1_KeyUp" Cursor="IBeam" />
+        <DataGrid x:Name="dgResults" CanUserAddRows="False"  AutoGenerateColumns="False" Margin="125,173,64,43" RenderTransformOrigin="0.503,0.493">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Логін:" Binding="{Binding UserLogin}"/>
                 <DataGridTextColumn Header="Предмет:" Binding="{Binding TestName}"/>
@@ -16,16 +17,16 @@
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Background="#FFA64E00" Content="Видалити даний результат" x:Name="delete_Record" Click="delete_Record_Click"/>
+                            <Button Background="Red" Content="Видалити" x:Name="delete_Record" Click="delete_Record_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel HorizontalAlignment="Left" Height="93" VerticalAlignment="Top" Width="794" Background="#FFFF9500" Margin="-2,0,0,0" IsEnabled="False"/>
+        <StackPanel HorizontalAlignment="Center" Height="93" VerticalAlignment="Top" Width="1048" Background="#FFFF9500" IsEnabled="False"/>
         <Label Content="TestApplication&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,10,0,0" Width="303" Foreground="#FFF0FBFA" FontFamily="Oswald" FontSize="36" BorderThickness="1,0,0,0" Height="74"/>
         <Image HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="125" Margin="22,10,0,0" Source="/WpfApp1;component/Images/student-icon.png"/>
-        <Button x:Name="BackButton" Content="Повернутись назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="166" Margin="579,10,0,0" Height="32" Background="#FFA64E00" Click="BackButton_Click"/>
-        <Button x:Name="ExitButton" Content="Вийти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="166" Margin="579,47,0,0" Height="37" Background="#FFA64E00" Click="ExitButton_Click"/>
+        <Button x:Name="BackButton" Content="Повернутись назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="166" Margin="818,14,0,0" Height="32" Background="#FFA64E00" Click="BackButton_Click"/>
+        <Button x:Name="ExitButton" Content="Вийти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="166" Margin="818,51,0,0" Height="37" Background="#FFA64E00" Click="ExitButton_Click"/>
     </Grid>
 </Window>

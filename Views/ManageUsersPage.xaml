@@ -5,13 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1.Views"
         mc:Ignorable="d"
-        Title="Керування користувачами" Height="480" Width="1050" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Images/Oxygen-Icons.org-Oxygen-Categories-applications-education-university.ico">
-    <Grid Height="562" VerticalAlignment="Top">
-        <DataGrid Margin="54,218,10,176" x:Name="dgUsers" CanUserAddRows="False" AutoGenerateColumns="False">
+        Title="Керування користувачами" Height="562" Width="1106" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Images/Oxygen-Icons.org-Oxygen-Categories-applications-education-university.ico">
+    <Grid Height="554" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1106">
+        <TextBox x:Name="textBox1" FontSize="15" Height="30" Margin="46,146,329,0" VerticalAlignment="Top" MouseEnter="textBox1_MouseEnter_1" MouseLeave="textBox1_MouseLeave" KeyUp="textBox1_KeyUp" Cursor="IBeam" />
+        <DataGrid Margin="54,218,10,84" x:Name="dgUsers" CanUserAddRows="False" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Логін:" Binding="{Binding Login}"/>
-                <DataGridTextColumn Header="Викладач:" Binding="{Binding IsTeacher}"/>
-                <DataGridTextColumn Header="СуперАдмін:" Binding="{Binding IsSuperAdmin}"/>
+                <DataGridTextColumn Header="Логін" Binding="{Binding Login}"/>
+                <DataGridTemplateColumn Header="Викладач">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsTeacher, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="СуперАдмін">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsSuperAdmin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Background="#FFA64E00" Content="Надати/забрати статус викладача" x:Name="makeIsTeacher" Click="makeIsTeacher_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Background="#FFA64E00" Content="Надати/забрати статус супер адміна" x:Name="makeIsSuperAdmin" Click="makeIsSuperAdmin_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -19,27 +46,12 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Background="#FFA64E00" Content="Зробити викладачем:" x:Name="makeIsTeacher" Click="makeIsTeacher_Click"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Background="#FFA64E00" Content="Зробити супер адміном:" x:Name="makeIsSuperAdmin" Click="makeIsSuperAdmin_Click"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel HorizontalAlignment="Center" Height="116" VerticalAlignment="Top" Width="1050" Background="#FFFF9500" IsEnabled="False"/>
+        <StackPanel HorizontalAlignment="Center" Height="116" VerticalAlignment="Top" Width="1106" Background="#FFFF9500" IsEnabled="False"/>
         <Label Content="TestApplication&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,12,0,0" Width="315" Foreground="#FFF0FBFA" FontFamily="Oswald" FontSize="36" BorderThickness="1,0,0,0"/>
         <Image HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="130" Margin="26,12,0,0" Source="C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\Images\student-icon.png"/>
-        <Button x:Name="BackButton" Content="Повернутись назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Margin="846,17,0,0" Height="32" Background="#FFA64E00" Click="BackButton_Click"/>
-        <Button x:Name="ExitButton" Content="Вийти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Margin="846,58,0,0" Height="38" Background="#FFA64E00" Click="ExitButton_Click"/>
-        <Button x:Name="RefreshButton" IsEnabled="True" Panel.ZIndex="10" Content="Перезавантажити" Margin="636,136,240,394" Background="#FFA64E00" Click="RefreshButton_Click"/>
+        <Button x:Name="BackButton" Content="Повернутись назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Margin="886,21,0,0" Height="32" Background="#FFA64E00" Click="BackButton_Click"/>
+        <Button x:Name="ExitButton" Content="Вийти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Margin="887,58,0,0" Height="38" Background="#FFA64E00" Click="ExitButton_Click"/>
     </Grid>
 </Window>
