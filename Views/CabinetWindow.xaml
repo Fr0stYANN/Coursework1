@@ -31,7 +31,7 @@
         <Button x:Name="BackButton" Content="Повернутись назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Grid.Column="3" Margin="259,10,0,0" Height="32" Background="#FFA64E00" Grid.ColumnSpan="2" Click="BackButton_Click"/>
         <Button x:Name="ExitButton" Content="Вийти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Grid.Column="3" Margin="259,47,0,0" Height="37" Background="#FFA64E00" Grid.ColumnSpan="2" Click="ExitButton_Click"/>
         <Button x:Name="CheckResults"   Click="CheckResults_Click"  Content="Перевірити результати"  Margin="17,208,10,342" Background="#FFA64E00"  Grid.ColumnSpan="2"/>
-        <Button x:Name="ManageUsers"  Click="ManageUsers_Click" Content="Керувати користувачами"  Margin="19,291,9,259" Background="#FFA64E00" Visibility="Visible" Grid.ColumnSpan="2" Cursor="Hand" RenderTransformOrigin="0.503,-0.106"/>
-        <Button x:Name="TeacherButton" Visibility="Visible" Content="Керувати тестами" Margin="17,117,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Height="49" Background="#FFA64E00" Click="a_Click" Grid.ColumnSpan="3"/>
+        <Button x:Name="ManageUsers"  Click="ManageUsers_Click" Content="Керувати користувачами"  Margin="19,291,9,259" Background="#FFA64E00" Visibility="Hidden" Grid.ColumnSpan="2" Cursor="Hand" RenderTransformOrigin="0.503,-0.106"/>
+        <Button x:Name="TeacherButton" Visibility="Hidden" Content="Керувати тестами" Margin="17,117,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Height="49" Background="#FFA64E00" Click="a_Click" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>

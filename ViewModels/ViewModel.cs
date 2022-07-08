@@ -19,9 +19,9 @@ namespace WpfApp1.ViewModels
         public BaseContent Content { get => _content; set { _content = value; OnPropertyChanged(); } }
         public ViewModel(int testId)
         {
-            XmlDataProvider xmlDataProvider = new XmlDataProvider();
+            XmlRepository xmlDataProvider = new XmlRepository();
             test = xmlDataProvider.GetAllTests().Where(test => test.TestId == testId).FirstOrDefault();
-            TestIdContainer.TestMinutesLimit = test.MinutesLimit;
+            //TestIdContainer.TestMinutesLimit = test.MinutesLimit;
             TotalMethod(null);
         }
         private void TitleMethod(object parameter)

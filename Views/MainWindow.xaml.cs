@@ -55,7 +55,7 @@ namespace WpfApp1.Views
             var login = loginTextBox.Text;
             var password = HashPassword.HashPasswordFunc(passwordTextBox.Password);
             var loginResult = UserRepository.CheckUserExists(password, login);
-            XmlDataProvider xmlDataProvider = new XmlDataProvider();
+            XmlRepository xmlDataProvider = new XmlRepository();
             var test = xmlDataProvider.GetAllTests();
             if (loginResult == true)
             {

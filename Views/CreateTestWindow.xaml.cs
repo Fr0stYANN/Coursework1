@@ -28,7 +28,7 @@ namespace WpfApp1.Views
         public CreateTestWindow()
         {
             InitializeComponent();
-            XmlDataProvider xmlDataProvider = new XmlDataProvider();
+            XmlRepository xmlDataProvider = new XmlRepository();
             List<Test> NeededTestsFromXml = new List<Test>(xmlDataProvider.GetAllTests());
             Tests = new ObservableCollection<Test>(NeededTestsFromXml);
             testss.ItemsSource = Tests;
@@ -37,7 +37,7 @@ namespace WpfApp1.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             (testss.SelectedItem as Test).IsActive = !(testss.SelectedItem as Test).IsActive;
-            XmlDataProvider xmlDataProvider = new XmlDataProvider();
+            XmlRepository xmlDataProvider = new XmlRepository();
             List<Test> tests = new List<Test>(Tests);
             xmlDataProvider.SetSomeChanges(tests);
             //submit_button.Visibility = Visibility.Hidden;
@@ -75,7 +75,7 @@ namespace WpfApp1.Views
         private void UploadContent_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog openFileDialog = new OpenFileDialog();
-            XmlDataProvider xmlDataProvider = new XmlDataProvider();
+            XmlRepository xmlDataProvider = new XmlRepository();
             DataContainer dataContainer = new DataContainer();
             bool? response = openFileDialog.ShowDialog();
             if (response == true)
@@ -94,13 +94,17 @@ namespace WpfApp1.Views
                     Tests.Add(test);
                     xmlDataProvider.SetSomeChanges(dataContainer.Tests);
                 }
+                else
+                {
+                    MessageBox.Show("Помилка завантажено невірний тест", "Помилка!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
 
         private void DeleteTest_Click(object sender, RoutedEventArgs e)
         {
             Tests.Remove(testss.SelectedItem as Test);
-            XmlDataProvider xmlDataProvider = new XmlDataProvider();
+            XmlRepository xmlDataProvider = new XmlRepository();
             DataContainer dataContainer = new DataContainer();
             List<Test> tests = new List<Test>(Tests);
             dataContainer.Tests = tests;

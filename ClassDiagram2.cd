@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WpfApp1.App" Collapsed="true">
+    <Position X="23.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.DataBank" Collapsed="true">
+    <Position X="25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAACAgAAAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>DataBank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.DataContainer" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.HashPassword" Collapsed="true">
+    <Position X="26.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HashPassword.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.TestAttempt" Collapsed="true">
+    <Position X="23.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAgACAAEAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>TestAttempt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.TestIdContainer" Collapsed="true">
+    <Position X="26.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TestIdContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.User" Collapsed="true">
+    <Position X="23.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAABAACAAAAAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>UserData\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.UserRepository" Collapsed="true">
+    <Position X="26.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAEAAAAAAAIAAAAAAAAECAAAAEAAAA=</HashCode>
+      <FileName>UserData\UserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.XmlDataProvider" Collapsed="true">
+    <Position X="28.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAIAABAAAAAAAA=</HashCode>
+      <FileName>XmlDataProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.Content.BaseContent" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Content\BaseContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.Content.QuestionsContent" Collapsed="true">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <InheritanceLine Type="WpfApp1.Content.BaseContent" ManuallyRouted="true">
+      <Path>
+        <Point X="10.25" Y="2.441" />
+        <Point X="10.25" Y="2.875" />
+        <Point X="8.534" Y="2.875" />
+        <Point X="8.534" Y="3.126" />
+        <Point X="8.5" Y="3.126" />
+        <Point X="8.5" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>UASAADAAAABgARAAQEkAAAAAAAQIAABEAAEBAAAABQA=</HashCode>
+      <FileName>Content\QuestionContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.Content.TitleContent" Collapsed="true">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Content\TitleContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.Content.TotalContent" Collapsed="true">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAIABAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Content\TotalContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.INPC.OnPropertyChangedBaseImplementation" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>INPC\OnPropertyChangedBaseImplementation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WpfApp1.INPC.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAABAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>INPC\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfApp1.Properties.Resources" Collapsed="true">
+    <Position X="26.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.Properties.Settings" Collapsed="true">
+    <Position X="28.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.TestClasses.Test" Collapsed="true">
+    <Position X="18.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAABCAEAAEABAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>TestClasses\Test.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.TestClasses.TestAnswer" Collapsed="true">
+    <Position X="32" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAEAAAAA=</HashCode>
+      <FileName>TestClasses\TestAnswer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.TestClasses.TestQuestion" Collapsed="true">
+    <Position X="28.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>TestClasses\TestQuestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.UserControls.QuestionsUC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>UserControls\QuestionsUC.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfApp1.UserControls.TitleUC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserControls\TitleUC.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfApp1.UserControls.TotalUC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>UserControls\TotalUC.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfApp1.UserData.AttemptRepository" Collapsed="true">
+    <Position X="25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAggAAAAQAAAwAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>UserData\AttemptRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.ViewModels.AnswerViewModel" Collapsed="true">
+    <Position X="20.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAkGAAAAAA=</HashCode>
+      <FileName>ViewModels\AnswerViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.ViewModels.QuestionCheckBoxViewModel" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\QuestionCheckBoxViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.ViewModels.QuestionRadioButtonViewModel" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\QuestionRadioButtonViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.ViewModels.QuestionViewModel" Collapsed="true">
+    <Position X="1.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAEAAQAAgCAAAQAA=</HashCode>
+      <FileName>ViewModels\QuestionViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.ViewModels.TeacherPageViewModel" Collapsed="true">
+    <Position X="30.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\TeacherPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.ViewModels.TestViewModel" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAACAAAAAAAAAAAAAAAAEAAAACCAAAAA=</HashCode>
+      <FileName>ViewModels\TestViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.ViewModels.ViewModel" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAQAAAgAAAACBAAAAAAAAAAgAAAAIAAAIAAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp1.Views.CabinetWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FIAAQAAAAAAAgAAAAAAAgAkAAAAAAAAAAAAABCAAAAA=</HashCode>
+      <FileName>Views\CabinetWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfApp1.Views.CheckResultsWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABKEAQAA=</HashCode>
+      <FileName>Views\CheckResultsWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfApp1.Views.CreateTestWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAABAkAAAAAAAAAAAAAhCAAAAA=</HashCode>
+      <FileName>Views\CreateTestWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfApp1.Views.CreateWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\CreateWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfApp1.Views.MainTestWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\MainTestWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfApp1.Views.AuthWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAgAAABAAAAAAAAAAgAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Views\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfApp1.Views.ManageUsersPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAACAAACIAACAAAAAAAAAAgAAAAAAAAAAABKAAAAA=</HashCode>
+      <FileName>Views\ManageUsersPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfApp1.Views.MathWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAACAREAAAAAAAAAiACQACAAAAAAEQAAAAiAAAAw=</HashCode>
+      <FileName>Views\MathWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfApp1.Views.TestBeginningWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\TestBeginningWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfApp1.Views.UserCheksResultWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABKEAQAA=</HashCode>
+      <FileName>Views\UserCheksResultWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Delegate Name="WpfApp1.INPC.ExecuteHandler" Collapsed="true">
+    <Position X="25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>INPC\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="WpfApp1.INPC.CanExecuteHandler" Collapsed="true">
+    <Position X="23.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>INPC\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

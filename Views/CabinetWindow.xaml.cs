@@ -28,7 +28,7 @@ namespace WpfApp1.Views
         public CabinetWindow()
         {
              InitializeComponent();
-            XmlDataProvider xmlDataProvider = new XmlDataProvider();
+            XmlRepository xmlDataProvider = new XmlRepository();
             var tests = xmlDataProvider.GetAllTests();
             Tests = tests.Where(t => t.IsActive == true).ToList();
             availableTests.ItemsSource = Tests;

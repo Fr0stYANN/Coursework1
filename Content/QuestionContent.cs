@@ -47,7 +47,6 @@ namespace WpfApp1.Content
                 Seconds = 0;
                 timer.Stop();
                 IsEnabled = false;
-                return;
             }
             if (Seconds >= 59)
             {

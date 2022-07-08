@@ -9,13 +9,14 @@ using WpfApp1.TestClasses;
 
 namespace WpfApp1
 {
-    public class XmlDataProvider
+    public class XmlRepository
     {
         XmlSerializer xmlSerializer = new XmlSerializer(typeof(DataContainer));
+        string FileString = @"C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\Test.xml";
         public List<Test> GetAllTests()
         {
             DataContainer data = new DataContainer();
-            using (FileStream fs = new FileStream(@"C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\Test.xml", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream(FileString, FileMode.OpenOrCreate))
             {
                 data = (DataContainer)xmlSerializer.Deserialize(fs);
             }
@@ -25,7 +26,7 @@ namespace WpfApp1
         {
             DataContainer data = new DataContainer();
             data.Tests = Tests;
-            using(FileStream fs = new FileStream(@"C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\Test.xml", FileMode.Truncate))
+            using(FileStream fs = new FileStream(FileString, FileMode.Truncate))
             {
                 xmlSerializer.Serialize(fs, data);
             }

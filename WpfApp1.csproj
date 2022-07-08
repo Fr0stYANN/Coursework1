@@ -106,7 +106,7 @@
     <Compile Include="DataContainer.cs" />
     <Compile Include="INPC\OnPropertyChangedBaseImplementation.cs" />
     <Compile Include="INPC\RelayCommand.cs" />
-    <Compile Include="TestAttempt.cs" />
+    <Compile Include="Models\TestAttempt.cs" />
     <Compile Include="TestIdContainer.cs" />
     <Compile Include="UserControls\QuestionsUC.xaml.cs">
       <DependentUpon>QuestionsUC.xaml</DependentUpon>
@@ -117,7 +117,7 @@
     <Compile Include="UserControls\TotalUC.xaml.cs">
       <DependentUpon>TotalUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserData\AttemptRepository.cs" />
+    <Compile Include="Repositories\AttemptRepository.cs" />
     <Compile Include="ViewModels\QuestionCheckBoxViewModel.cs" />
     <Compile Include="ViewModels\TeacherPageViewModel.cs" />
     <Compile Include="Views\CheckResultsWindow.xaml.cs">
@@ -141,8 +141,8 @@
     <Compile Include="TestClasses\Test.cs" />
     <Compile Include="TestClasses\TestAnswer.cs" />
     <Compile Include="TestClasses\TestQuestion.cs" />
-    <Compile Include="UserData\User.cs" />
-    <Compile Include="UserData\UserRepository.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="ViewModels\AnswerViewModel.cs" />
     <Compile Include="ViewModels\QuestionRadioButtonViewModel.cs" />
     <Compile Include="ViewModels\QuestionViewModel.cs" />
@@ -157,7 +157,7 @@
     <Compile Include="Views\UserCheksResultWindow.xaml.cs">
       <DependentUpon>UserCheksResultWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="XmlDataProvider.cs" />
+    <Compile Include="Repositories\XmlRepository.cs" />
     <Page Include="UserControls\QuestionsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -238,6 +238,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

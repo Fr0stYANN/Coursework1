@@ -49,6 +49,6 @@ C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\Views\CheckResultsWin
 C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\Views\CheckResultsWindow.baml
 C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\Views\UserCheksResultWindow.g.cs
 C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\Views\UserCheksResultWindow.baml
-C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\WpfApp1.csproj.SuggestedBindingRedirects.cache
 C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\Views\ManageUsersPage.g.cs
 C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\Views\ManageUsersPage.baml
+C:\Users\Phoenix\Desktop\Coursework-main\WpfApp1\obj\Debug\WpfApp1.csproj.SuggestedBindingRedirects.cache
